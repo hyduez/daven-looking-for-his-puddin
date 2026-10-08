@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://chj3cyjtysgd4"]
+
+[ext_resource type="Script" uid="uid://bc65rwld6dr4n" path="res://audio_controller.gd" id="1_31uvl"]
+[ext_resource type="AudioStream" uid="uid://c8m8sfvt2m1jx" path="res://audios/jump.wav" id="2_onihc"]
+[ext_resource type="AudioStream" uid="uid://v2vohym5u0p" path="res://audios/mountain.mp3" id="3_5vlka"]
+
+[node name="AudioController" type="Node2D" unique_id=939599682]
+script = ExtResource("1_31uvl")
+
+[node name="Jump" type="AudioStreamPlayer" parent="." unique_id=1087288703]
+stream = ExtResource("2_onihc")
+volume_db = -5.0
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=793925466]
+stream = ExtResource("3_5vlka")
+volume_db = -10.0
+parameters/looping = false
