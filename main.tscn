@@ -446,16 +446,6 @@ outline_color = Color(0.9882353, 0.5254902, 0.08627451, 1)
 
 [node name="Node" type="Node" unique_id=1274234441]
 
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1727190944]
-repeat_size = Vector2(1080, 1080)
-repeat_times = 10
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=638613997]
-position = Vector2(71, -24)
-texture = ExtResource("4_1bvp3")
-centered = false
-offset = Vector2(-248, -136)
-
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1679645336]
 script = ExtResource("1_h2yge")
 
@@ -479,10 +469,14 @@ tile_map_data = PackedByteArray("AAAAAAEAAAADAAAAAAABAAEAAAADAAAAAAACAAEAAAADAAA
 tile_set = SubResource("TileSet_h2yge")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1431595681]
-visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1935485327]
 motion_mirroring = Vector2(490, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=638613997]
+texture = ExtResource("4_1bvp3")
+centered = false
+offset = Vector2(-248, -136)
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1467281173]
 motion_mirroring = Vector2(490, 0)
